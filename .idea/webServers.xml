@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="62b211ce-d07c-42c9-a63d-ba8b3babb7f5" name="toHTDocs" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="C:\xampp\htdocs\studentAssisProg" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
