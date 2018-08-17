@@ -9,9 +9,10 @@
 
 include("connectLocalDB.php");
 
-$new_name = $_POST['newName'];
+$id = $_POST['id'];
+$newname = $_POST['newname'];
 
-$sql = "INSERT INTO test (name) VALUES ('$new_name')";
+$sql = "UPDATE test SET name ='".$newname."' WHERE id=".$id;
 $query = mysqli_query($conn, $sql);
 
 ?>

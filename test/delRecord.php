@@ -9,9 +9,9 @@
 
 include("connectLocalDB.php");
 
-$new_name = $_POST['newName'];
+$id = $_POST['id'];
 
-$sql = "INSERT INTO test (name) VALUES ('$new_name')";
+$sql = "DELETE FROM test WHERE id = ".$id;
 $query = mysqli_query($conn, $sql);
 
 ?>

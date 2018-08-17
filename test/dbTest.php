@@ -14,18 +14,20 @@ $result = $conn->query($sql);
 //echo $result;
 
 $content = '';
-$content .= '<div>';
+$content .= '<div><table border="1">';
 
 if ($result->num_rows > 0) {
+    $content .= '<thead><th>ID<th>Name</th><th colspan="2">Options</th></thead>';
     while ($row = $result->fetch_assoc()) {
-        $content .= 'ID : ';
-        $content .= $row["id"];
-        $content .= ' | Name : ';
-        $content .= $row["name"];
-        $content .= '<br>';
+        $content .= '<tr id="rec"'.$row["id"].'>';
+        $content .= '<td>'.$row["id"].'</td>';
+        $content .= '<td>'.$row["name"].'</td>';
+        $content .= '<td><button onclick="delRecord('.$row["id"].')">Delete</button></td>';
+        $content .= '<td><button onclick="upRecord('.$row["id"].')">Update</button></td>';
+        $content .= '</tr>';
     }
 }
-$content .= '</div>';
+$content .= '</table></div>';
 
 echo $content;
 
